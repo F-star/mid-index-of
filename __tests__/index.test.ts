@@ -1,19 +1,19 @@
 import midIndexOf, { IOptions } from '..';
 
 describe('midFindIndex test', () => {
-  test('midIndexOf([1, 2, 3, 4, 5], 5) ==> 4', () => {
+  test('[simple usage]: midIndexOf([1, 2, 3, 4, 5], 5) ==> 4', () => {
     const arr = [1, 2, 3, 4, 5];
     const target = 5;
     expect(midIndexOf(arr, target)).toBe(arr.indexOf(target));
   });
 
-  test('midIndexOf([1, 2, 3, 4, 5], 8) ==> -1', () => {
+  test('[find a no exit element]: midIndexOf([1, 2, 3, 4, 5], 8) ==> -1', () => {
     const arr = [1, 2, 3, 4, 5];
     const target = 8;
     expect(midIndexOf(arr, target)).toBe(arr.indexOf(target));
   });
 
-  test('equalFn test', () => {
+  test('[equalFn test]', () => {
     expect(
       midIndexOf([NaN, NaN, NaN], NaN, {
         startIdx: 1,
@@ -25,7 +25,7 @@ describe('midFindIndex test', () => {
   });
 
   // about internal implementation
-  test('snake search test', () => {
+  test('[search path test]: snake search', () => {
     const arr = [0, 1, 2, 3, 4, 5, 6, 7];
     const target = 6;
     const startIdx = 2;

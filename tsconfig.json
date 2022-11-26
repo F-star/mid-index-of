@@ -1,8 +1,12 @@
 {
+  "files": ["index.ts"],
   "compilerOptions": {
     "target": "ES5",
     "lib": ["ESNext"],
-    "module": "commonjs",
+
+    "declaration": true,
+    "outDir": "dist",
+
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,

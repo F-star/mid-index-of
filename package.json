@@ -19,6 +19,9 @@
     "utils",
     "indexof"
   ],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rollup -c",
     "test": "jest",
